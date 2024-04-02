@@ -6,6 +6,7 @@
     "extends": [
         "standard-with-typescript",
         "eslint:recommended",
+        "plugin:prettier/recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier"
     ],
@@ -16,7 +17,9 @@
         "project": ["./tsconfig.json"]
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "import",
+        "simple-import-sort"
     ],
     "rules": {
     }
