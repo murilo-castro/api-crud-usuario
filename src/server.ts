@@ -6,4 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(router);
 
-app.listen(3333, () => console.log(`Servidor online na prota ${3333}.`));
+const PORT = process.env.PORT || 3333;
+
+app.listen(PORT, () => console.log(`Servidor online na prota ${PORT}.`));
