@@ -9,7 +9,7 @@ type UserRequest = {
 
 class CreateUserService {
   async execute({ name, sex, date_of_birth, marital_status }: UserRequest) {
-    const user = prismaClient.user.create({
+    const user = await prismaClient.user.create({
       data: {
         name,
         sex,
@@ -17,7 +17,7 @@ class CreateUserService {
         marital_status,
       },
     });
-    return { ok: true };
+    return user;
   }
 }
 

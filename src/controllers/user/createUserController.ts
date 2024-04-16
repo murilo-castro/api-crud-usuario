@@ -6,14 +6,14 @@ class CreateUserController {
     const { name, sex, date_of_birth, marital_status } = req.body;
 
     const createUserService = new CreateUserService();
-    const user = createUserService.execute({
+    const user = await createUserService.execute({
       name,
       sex,
       date_of_birth,
       marital_status,
     });
 
-    return res.json({ ok: true });
+    return res.json(user);
   }
 }
 
