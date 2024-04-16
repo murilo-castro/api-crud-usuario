@@ -18,7 +18,7 @@ model User {
   name           String
   sex            String
   date_of_birth  String
-  Marital_status String
+  marital_status String
 
   address Address[]
 
